@@ -14,9 +14,9 @@ body {
   width: 375px;
   border-radius: 20px;
   position: relative;
+  font-size: 100px;
 
   &::before {
-    // content: " \2666";
     position: absolute;
     top: 5px;
     left: 20px;
@@ -24,8 +24,6 @@ body {
   }
 
   &::after {
-    // content: " \2666";
-    // color: red;
     position: absolute;
     bottom: 5px;
     right: 20px;
@@ -43,15 +41,11 @@ body {
     color: red;
   }
   &.spade:before,
-  &.spade.after {
+  &.spade:after {
     content: " \2660";
   }
   &.club:before,
-  &.club.after {
+  &.club:after {
     content: " \2663";
   }
-}
-
-.face {
-  font-size: 100px;
 }
