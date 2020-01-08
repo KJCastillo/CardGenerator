@@ -2,11 +2,56 @@
 
 body {
   background: green;
+  box-sizing: border-box;
 }
 
 .card {
   display: inline-block;
   margin: auto;
-  height: 550px;
-  width: 400px;
+  padding: 10px;
+  padding-top: 180px;
+  height: 525px;
+  width: 375px;
+  border-radius: 20px;
+  position: relative;
+
+  &::before {
+    // content: " \2666";
+    position: absolute;
+    top: 5px;
+    left: 20px;
+    font-size: 90px;
+  }
+
+  &::after {
+    // content: " \2666";
+    // color: red;
+    position: absolute;
+    bottom: 5px;
+    right: 20px;
+    font-size: 90px;
+  }
+
+  &.diamond:before,
+  &.diamond:after {
+    content: " \2666";
+    color: red;
+  }
+  &.heart:before,
+  &.heart:after {
+    content: " \2665";
+    color: red;
+  }
+  &.spade:before,
+  &.spade.after {
+    content: " \2660";
+  }
+  &.club:before,
+  &.club.after {
+    content: " \2663";
+  }
+}
+
+.face {
+  font-size: 100px;
 }
