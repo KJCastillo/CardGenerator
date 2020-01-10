@@ -2,17 +2,33 @@
 
 body {
   background: green;
+  background-image: url("https://i.stack.imgur.com/q02th.jpg");
   box-sizing: border-box;
   font-family: "Ultra", serif;
+}
+
+h2 {
+  color: white;
+}
+
+h2,
+p {
+  margin-bottom: 10px;
+}
+
+button {
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 10px;
 }
 
 .card {
   display: inline-block;
   margin: auto;
   padding: 10px;
-  padding-top: 180px;
-  height: 525px;
-  width: 375px;
+  padding-top: 135px;
+  height: 425px;
+  width: 275px;
   border-radius: 20px;
   position: relative;
   font-size: 100px;
