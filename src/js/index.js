@@ -9,10 +9,19 @@ import "../style/index.scss";
 window.onload = () => {
   // document.querySelector(".card").classList.add(randomSuit());
   // document.querySelector(".card").innerHTML = randomFace();
-
+  let history = [];
+  let suit = "";
+  let card = document.querySelector(".card");
+  suit = randomSuit();
+  history.push(suit);
   document.querySelector("#btn").addEventListener("click", function() {
-    document.querySelector(".card").innerHTML = randomFace();
-    document.querySelector(".card").classList.add(randomSuit());
+    suit = randomSuit();
+    history.push(suit);
+    console.log("card history: ", history);
+    console.log("new suit: ", suit);
+    card.innerHTML = randomFace();
+    card.classList.remove(history[history.length - 2]);
+    card.classList.add(suit);
   });
 
   userName();
